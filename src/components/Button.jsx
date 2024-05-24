@@ -1,9 +1,8 @@
-import { useContext } from 'react'
-import { ThemeContext } from '../context/ThemeContext'
+import useThemeContext from '../hooks/useThemeContext'
 
 export default function Button() {
 
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useThemeContext()
 
   const changeTheme = () => theme === 'light' ? setTheme('dark') : setTheme('light')
 

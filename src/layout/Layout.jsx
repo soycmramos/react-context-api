@@ -1,12 +1,10 @@
-import { useContext } from 'react'
-import { ThemeContext } from './../context/ThemeContext'
-
+import useThemeContext from './../hooks/useThemeContext';
 import Header from './../components/Header'
 import Footer from './../components/Footer'
 
 export default function Layout({ children }) {
 
-  const { theme } = useContext(ThemeContext)
+  const { theme } = useThemeContext()
 
   return (
     <>
